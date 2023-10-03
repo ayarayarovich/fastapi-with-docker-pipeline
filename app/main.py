@@ -7,7 +7,7 @@ app = FastAPI()
 async def root():
     with open('resources/jopa.txt', 'r') as file:
         data = file.read()
-    return {"data": data}
+    return {"data": data, "pidor": "huetahunesa"}
 
 
 @app.get("/hello/{name}")
