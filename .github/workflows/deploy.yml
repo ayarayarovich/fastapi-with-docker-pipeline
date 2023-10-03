@@ -39,4 +39,4 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USERNAME }}
           key: ${{ secrets.DEPLOY_KEY }}
-          script: sudo docker service update --image theayarayarovich/fastapi_pipelined:${{ github.ref_name }} ${{ vars.DOCKER_SERVICE_NAME }}
+          script: sudo docker compose pull && sudo docker compose up -d
